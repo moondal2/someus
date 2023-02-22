@@ -1,3 +1,5 @@
+import NaviDiary from "../navigation/NaviDiary";
+
 const Mypage = ({ history }) => {
 
     const handlerPrivate = () => {
@@ -10,6 +12,7 @@ const Mypage = ({ history }) => {
 
     return (
         <>
+        <NaviDiary />
             <div className="mypageBackground">
                 <div className="mypage">
                     <button className="myD"

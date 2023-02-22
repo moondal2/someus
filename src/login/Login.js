@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { withRouter } from "react-router-dom";
 import './Login.css';
 import NaviLogout from '../navigation/NaviLogout';
 
@@ -59,9 +58,7 @@ const Login = ({ history }) => {
             <NaviLogout />
             <div className="loginPage">
                 <div className="loginContainer">
-                    <div className="loginLogo">
-                        <img src={require("./logo_black.png")} />
-                    </div>
+                    <div className="loginLogo"></div>
                     <div className="loginInput" >
                         <form className="loginForm" onSubmit={handlerSubmit}>
                             {/* id, pw가 값이 있다면 label의 클래스명이 바껴서 다른 css가 적용되도록. */}
@@ -71,9 +68,10 @@ const Login = ({ history }) => {
                                         아이디
                                     </span>
                                 </label><span className="A">
-                                    <img src={require("./login_icon.png")} />
+                                    <div className="login_logo"></div>
                                 </span>
-                                <input value={id}
+                                <input id="loginId"
+                                value={id}
                                     onChange={handlerIdInput}
                                     placeholder="아이디">
 
@@ -84,7 +82,7 @@ const Login = ({ history }) => {
                                     <span>비밀번호</span>
                                 </label>
                                 <span className="A">
-                                    <img src={require("./login_icon.png")} />
+                                    <div className="login_logo"></div>
                                 </span>
                                 <input id="loginPassword"
                                     type="password"
@@ -94,8 +92,8 @@ const Login = ({ history }) => {
 
                             </div>
                             <div className="loginBtnBox">
-                                <button type="login">로그인</button>
                                 <button type="regist" onClick={handlerRegist}>회원가입</button>
+                                <button type="login">로그인</button>
                             </div>
                         </form>
                     </div>
