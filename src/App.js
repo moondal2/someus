@@ -1,15 +1,14 @@
 import { Route } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import Mypage from './mypage/Mypage';
-import Login from './login/Login';
 import Regist from './regist/Regist';
 import MyDiaryList from './mydiary/MyDiaryList';
 import TodoList from './todo/TodoList';
 import Page from './page/Page';
 import Page2 from './page/Page2';
+import Login from './login/Login';
 
 function App() {
-  
 
   return (
     <>

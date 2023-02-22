@@ -1,0 +1,250 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.modalBody {
+    position: fixed;
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    padding:40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .modalClose {
+    position: absolute;
+    right: 10px;
+    left: 10px;
+  }
+  .modalImg{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #888;
+    object-fit: cover;
+  }
+  
+  .modalRight{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .modalRightHeader{
+    display: flex;
+    width: 600px;
+    height: 50%;
+    justify-content: space-around;
+  }
+  
+  .modalRightHeaderRight{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+  }
+  
+  #middleLine{
+    width:90%;
+    height: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #000000;
+    
+  }
+  
+  .dairyContents{
+    display: flex;
+    width:90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    line-height: 28px;
+  }
+
+ /* ----------------------GroupL */
+
+
+
+ .groupL_modalBody {
+    position: fixed;
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    padding:40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .groupL_modalClose {
+    position: absolute;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .groupL_modalImg{
+    width: 45%;
+    height: 45%;
+    display: block;
+    background-color: #888;
+    object-fit: cover;
+  }
+  
+  .groupL_modalRight{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .groupL_modalRightHeader{
+    display: flex;
+    width: 600px;
+    height: 50%;
+    justify-content: space-around;
+  }
+  
+  .groupL_modalRightHeaderRight{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+  }
+  
+  #groupL_middleLine{
+    width:90%;
+    height: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #000000;
+    
+  }
+  
+  .groupL_dairyContents{
+    display: flex;
+    width:90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    line-height: 28px;
+  }
+
+  
+  .groupL_modalCloseBtn{
+    width: 70px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+/* ----------------------GroupR */
+
+
+
+.groupR_modalBody {
+    position: fixed;
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    padding:40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .groupR_modalClose {
+    position: absolute;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .groupR_modalImg{
+    width: 45%;
+    height: 45%;
+    display: block;
+    background-color: #888;
+  }
+  
+  .groupR_modalRight{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .groupR_modalRightHeader{
+    display: flex;
+    width: 600px;
+    height: 50%;
+    justify-content: space-around;
+  }
+  
+  .groupR_modalRightHeaderRight{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+  }
+  
+  #groupR_middleLine{
+    width:90%;
+    height: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #000000;
+    
+  }
+  
+  .groupR_dairyContents{
+    display: flex;
+    width:90%;
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    line-height: 28px;
+  }
+  
+  .boxbox{
+    height: 1000px;
+  }
+  
+  .groupR_modalCloseBtn{
+    width: 70px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+
+
+ 

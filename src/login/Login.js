@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-
+import './Login.css';
+import NaviLogout from '../navigation/NaviLogout';
 
 const Login = ({ history }) => {
     //id, pw state 설정
@@ -38,48 +39,69 @@ const Login = ({ history }) => {
         }
     };
 
+    useEffect(() => {
+        document.body.style.cssText = `
+        position: fixed;
+        top: -${window.scrollY}px;
+        overflow-y: scroll;
+        width: 100%;`;
+
+        return () => {
+            const scrollY = document.body.style.top;
+            document.body.style.cssText = '';
+            window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        };
+    }, []);
+
+
     return (
-        <div className="loginPage">
-            <div className="logo"><img src={require("./logo_black.png")} /></div>
-            <div className="loginInput">
-                <form onSubmit={handlerSubmit}>
-                    {/* id, pw가 값이 있다면 label의 클래스명이 바껴서 다른 css가 적용되도록. */}
-                    <div className={id === '' ? "dust-class" : "non-dust-class"}>
-                        <label>
-                            <span>
-                                아이디
-                            </span>
-                        </label><span className="A">
-                            <img src={require("./login_icon.png")} />
-                        </span>
-                        <input value={id}
-                            onChange={handlerIdInput}
-                            placeholder="아이디">
-
-                        </input>
+        <>
+            <NaviLogout />
+            <div className="loginPage">
+                <div className="loginContainer">
+                    <div className="loginLogo">
+                        <img src={require("./logo_black.png")} />
                     </div>
-                    <div className={pw === '' ? "dust-class" : "non-dust-class"}>
-                        <label>
-                            <span>비밀번호</span>
-                        </label>
-                        <span className="A">
-                            <img src={require("./login_icon.png")} />
-                        </span>
-                        <input id="loginPassword"
-                            type="password"
-                            value={pw}
-                            onChange={handlerPwInput}
-                            placeholder="비밀번호"></input>
+                    <div className="loginInput" >
+                        <form className="loginForm" onSubmit={handlerSubmit}>
+                            {/* id, pw가 값이 있다면 label의 클래스명이 바껴서 다른 css가 적용되도록. */}
+                            <div className={id === '' ? "loginInputBox1" : "loginInputBox2"}>
+                                <label>
+                                    <span>
+                                        아이디
+                                    </span>
+                                </label><span className="A">
+                                    <img src={require("./login_icon.png")} />
+                                </span>
+                                <input value={id}
+                                    onChange={handlerIdInput}
+                                    placeholder="아이디">
 
-                    </div>
-                    <div>
-                        <button type="submit">로그인</button>
-                        <button type="button" onClick={handlerRegist}>회원가입</button>
-                    </div>
-                </form>
+                                </input>
+                            </div>
+                            <div className={pw === '' ? "loginInputBox1" : "loginInputBox2"}>
+                                <label>
+                                    <span>비밀번호</span>
+                                </label>
+                                <span className="A">
+                                    <img src={require("./login_icon.png")} />
+                                </span>
+                                <input id="loginPassword"
+                                    type="password"
+                                    value={pw}
+                                    onChange={handlerPwInput}
+                                    placeholder="비밀번호"></input>
 
+                            </div>
+                            <div className="loginBtnBox">
+                                <button type="login">로그인</button>
+                                <button type="regist" onClick={handlerRegist}>회원가입</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
-export default withRouter(Login);
+export default Login;

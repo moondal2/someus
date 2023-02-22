@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Modal_GroupL from "./Modal_GroupL";
 import Modal_GroupR from "./Modal_GroupR";
+import './modal.css';
 
 
 const Modal = (props) => {
@@ -27,12 +28,12 @@ const Modal = (props) => {
 
     return (
         <>
-                <div className="modal" onClick={modalClose}>
-                    <div className="groupR_modalBody" onClick={(e) => e.stopPropagation()}> 
-                        <Modal_GroupL />
-                        <div></div>
-                        <Modal_GroupR />                
-                    </div>
+            <div className="modal" onClick={modalClose}>
+                <div className="groupR_modalBody" onClick={(e) => e.stopPropagation()}>
+                    <Modal_GroupL />
+                    <div></div>
+                    <Modal_GroupR />
+                </div>
             </div>
         </>
     );
